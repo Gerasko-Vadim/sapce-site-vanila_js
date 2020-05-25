@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Space</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="nav-btn">
+        <a href="#sistema">Солнечная система</a>
+        <a href="#planet">Планеты</a>
+        <a href="#calcul">Калькулятор</a>
+        <a href="#nas">О нас</a>
+      </div>
+    </a>
+    <div class="sapce-blok">
+      <div class="space-text">
+        <p >Космос</p>
+        <span class="text">
+          Космос — это почти пустое пространство, которое окружает нашу планету.
+          Мы готовы ответить на самые популярные ваши вопросы: почему в космосе
+          невесомость, почему в космосе нельзя дышать, как космос возник или
+          откуда появился. А как насчет философских вопросов: откуда появился
+          космос или есть ли у космоса начало и конец? Как себя чувствуют
+          космонавты на МКС и каким правилам должны придерживаться космонавты
+          находясь на орбите нашей планеты? Все ответы вы сможете найти у нас на
+          сайте!
+        </span>
+      </div>
+    </div>
+    <p class="title-sistema" id="sistema">Солнечная система</p>
+    <div class="content">
+      <canvas
+        id="Solar_System"
+        width="1050"
+        height="700"
+        style="border: 1px solid #000000;"
+        class="canvas"
+      ></canvas>
+      <p class="sistem-text">
+        Солнечная система — пространство, включающее в себя Солнце и все
+        естественные космические объекты, обращающиеся вокруг него. Возраст
+        около 4,57 млрд лет. Расположена во Вселенной по адресу: Местное
+        межзвездное облако, Местный пузырь, Рукав Ориона, Млечный Путь, Местная
+        группа галактик. Вращается вокруг центра Галактики на расстоянии от него
+        примерно 27 000 световых лет с периодом обращения 225-250 млн лет.
+        Радиус Солнечной системы составляет примерно 100 а.е.
+      </p>
+      <p class="sistem-text">
+        Солнце относится к классу желтых карликов. В нем сосредоточено 99,866%
+        всей массы системы. Большинство крупных объектов Солнечной системы
+        движется практически в одной плоскости, плоскости эклиптики, и
+        преимущественно в одном направлении, против часовой стрелки. Из них
+        крупнейшими являются 8 планет. Внутренние — скальные планеты Меркурий,
+        Венера, Земля и Марс. Остальные — газовые гиганты Юпитер, Сатурн, Уран и
+        Нептун, которые обладают кольцами, тонкими полосами мелких частиц,
+        обращающихся по близким орбитам практически в унисон. Все планеты, кроме
+        Меркурия и Венеры, обладают также спутниками, от одного до нескольких
+        десятков.
+      </p>
+
+      <p class="plan-t" id="planet">Планеты солнечной системы</p>
+      <div class="post">
+        <div class="card">
+          <img class="img" src="./Pics/VL_SS_earth.png" />
+          <p class="planet-title">Земля</p>
+          <p class="opisaniya">Масса: 5.97237</p>
+          <p class="opisaniya">Радиус: 6378.1366</p>
+          <p class="opisaniya">Температура:  29°С</p>
+          <button onclick="onclickBtn()"  class="planet-btn" id="earth">Подробнее ></button>
+        </div>
+        <div class="card">
+          <img class="img" src="./Pics/VL_SS_jupiter.png" />
+          <p class="planet-title">Юпитер</p>
+          <p class="opisaniya">Масса: 1.89819</p>
+          <p class="opisaniya">Радиус: 71492</p>
+          <p class="opisaniya">Температура:21 °С</p>
+          <button onclick="onclickBtn()"  class="planet-btn" id="jupiter">Подробнее ></button>
+        </div>
+        <div class="card">
+          <img class="img" src="./Pics/VL_SS_mars.png" />
+          <p class="planet-title">Марс</p>
+          <p class="opisaniya">Масса: 6.41712</p>
+          <p class="opisaniya">Радиус: 3396.19</p>
+          <p class="opisaniya">Температура:  -40 °С</p>
+          <button onclick="onclickBtn()"  class="planet-btn" id="mars">Подробнее ></button>
+        </div>
+        <div class="card">
+          <img class="img" src="./Pics/VL_SS_mercury.png" />
+          <p class="planet-title">Меркурий</p>
+          <p class="opisaniya">Масса:3.30114</p>
+          <p class="opisaniya">Радиус: 2440.53</p>
+          <p class="opisaniya">Температура: 349,9 °C</p>
+          <button onclick="onclickBtn()"  class="planet-btn" id="mercury">Подробнее ></button>
+        </div>
+        <div class="card">
+          <img class="img" src="./Pics/VL_SS_neptune.png" />
+          <p class="planet-title">Нептун</p>
+          <p class="opisaniya">Масса:1.02413</p>
+          <p class="opisaniya">Радиус:24764</p>
+          <p class="opisaniya">Температура:  −220 °C</p>
+          <button onclick="onclickBtn()"  class="planet-btn" id="neptune">Подробнее ></button>
+        </div>
+        <div class="card">
+          <img class="img" src="./Pics/VL_SS_saturn.png" />
+          <p class="planet-title">Сатурн</p>
+          <p class="opisaniya">Масса: 5.68336</p>
+          <p class="opisaniya">Радиус: 60268</p>
+          <p class="opisaniya">Температура: 150 °С </p>
+          <button onclick="onclickBtn()"  class="planet-btn" id="saturn">Подробнее ></button>
+        </div>
+        <div class="card">
+          <img class="img" src="./Pics/VL_SS_uranus.png" />
+          <p class="planet-title">Уранус</p>
+          <p class="opisaniya">Масса: 8,681E25 </p>
+          <p class="opisaniya">Радиус: 25 362</p>
+          <p class="opisaniya">Температура: - 224 °C</p>
+          <button onclick="onclickBtn()"  class="planet-btn" id="uranus">Подробнее ></button>
+        </div>
+        <div class="card">
+          <img class="img" src="./Pics/VL_SS_venus.png" />
+          <p class="planet-title">Венера</p>
+          <p class="opisaniya">Масса: 4,867E24</p>
+          <p class="opisaniya">Радиус: 6 051,8 </p>
+          <p class="opisaniya">Температура: 462 °C</p>
+          <button onclick="onclickBtn()"  class="planet-btn" id="venus">Подробнее ></button>
+        </div>
+      </div>
+
+      <div class="calculator" id="calcul">
+        <p>Сила притяжения двух небесных тел</p>
+        <div class="forms">
+          <div class="form">
+            <label>Масса первого тела</label>
+            <input type="text" id="input1" onchange="inputBtn(this.value)" class="input" placeholder="Тонн" />
+          </div>
+          <div class="form">
+            <label>Масса второго тела</label>
+            <input type="text" id="input2" onchange="inputBtn(this.value)" class="input" placeholder="Тонн" />
+          </div>
+       
+          <div class="form">
+            <label>Радиус</label>
+            <input type="text" id="input3" onchange="inputBtn(this.value)" class="input" placeholder="Км" />
+          </div>
+          <div class="form">
+            <label>Результат</label>
+            <input type="text" id="inputResult" class="input" placeholder="" />
+          </div>
+        </div>
+      </div>
+      <div class="onas content" id="nas">
+        <p >О нас</p>
+        <div class="onas-block">
+          <img class="img1" src="./Pics/ment-750x419.jpg"/>
+          <div class="onas-text">
+            <p>К наружным относят те пожары, которые можно оценить визуально.
+               Чаще всего этот класс бывает при горении зданий, складских помещений,
+                нефтепродуктов в резервуаре, на открытых технологических установках,
+                 лесных массивах и так далее. Наружные пожары всегда бывают только открытыми.
+
+              К внутренним относят пожары, произошедшие внутри здания, а они могут
+              быть как открытыми, так и закрытыми. Открытые пожары можно оценить при 
+              визуальном осмотре, к примеру, во время горения имущества в зданиях, 
+              оборудования, материалов и другие.
+              
+              Скрытые пожары чаще всего прячутся в пустотах строительных конструкций, 
+              вентиляции, торфяных залежах. При этом признаки горения можно обнаружить,
+               они часто выходят через щели, но оценить, насколько силен пожар, очень
+                трудно. К тому же такой вид пожара непредсказуем и может резко изменить
+                 свое направление.</p>
+          </div>
+        </div>
+      </div>
+      <div class="team">
+        <p>Наша команда</p>
+        <div class="team-block-card">
+          <div class="team-card">
+            <img class="team-img" src="./Pics/skvortsov.jpg"/>
+            <div class="team-card-content">
+              <p class="team-title">Скворцов Александр Александрович</p>
+              <p>Дата рождения: 6 мая 1966  </p>
+              <p>КЛАССНОСТЬ: военный летчик 1-го класса</p>
+            </div>
+            <span class="read">Читать</span>
+          </div>
+          <div class="team-card">
+            <img class="team-img"  src="./Pics/skripocka_1.jpg"/>
+            <div class="team-card-content">
+              <p class="team-title">Скрипочка Олег Иванович</p>
+              <p>Дата рождения: 24 декабря 1969 года  </p>
+              <p>КЛАССНОСТЬ: имеет 1-й разряд по парашютному спорту, выполнил более 300 прыжков с парашютом.  </p>
+            </div>
+            <span class="read">Читать</span>
+          </div>
+          <div class="team-card">
+            <img class="team-img" src="./Pics/kononenko_1.jpg"/>
+            <div class="team-card-content">
+              <p class="team-title">	
+                Кононенко Олег Дмитриевич</p>
+              <p>Дата рождения: 21 июня 1964 года   </p>
+              <p>КЛАССНОСТЬ: инструктор-космонавт-испытатель 1-го класса.</p>
+            
+            </div>
+            <span class="read">Читать</span>
+          </div>
+          <div class="team-card">
+            <img class="team-img" src="./Pics/andrei.borisenko-.jpg"/>
+            <div class="team-card-content">
+              <p class="team-title">	
+                Борисенко Андрей Иванович</p>
+              <p>Дата рождения: родился 17 апреля 1964 года в г. Ленинграде.  </p>
+              <p>КЛАССНОСТЬ: Инструктор-космонавт-испытатель - начальник группы космонавтов. Космонавт 2 класса.</p>
+           
+            </div>
+            <span class="read">Читать</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+      <div class="footer">
+        <div class="footer-block">
+          <p class="footer-title">Связатся с нами</p>
+          <div class="block-icon">
+             <p class="icons"><img class="google" src="./Pics/icons8-google-48.png"/>	&emsp;sapce-kg@gmail.com</p>
+          </div>
+         <div class="block-icon">
+            <p class="icons"><img class="google" src="./Pics/icons8-телеграмма-app-48.png"/>&emsp;+996(700)87-15-02</p>
+         </div>
+         <div class="block-icon">
+            <p class="icons"><img class="google" src="./Pics/icons8-whatsapp-48.png"/>&emsp;+996(550)04-83-65</p>
+         </div>
+         
+        </div>
+        <div class="footer-block">
+          <p class="footer-title">Наш адрес</p>
+          <p  class="icons">Кыргызстан, Бишкек</p>
+          <p  class="icons">ул.Мира 76</p>
+        </div>
+        <div class="footer-block">
+          <p class="footer-title">Мы в соц сетях</p>
+          <div class="socseti">
+            <img src="./Pics/icons8-вконтакте-48.png" alt="">
+            <img src="./Pics/icons8-instagram-48.png" alt="">
+            <img src="./Pics/icons8-facebook-48.png" alt="">
+          </div>
+        </div>
+      </div>
+      <button  id="scroll" onclick="goUp()">&#8593;</button>
+      <div id="modal">
+        <div class="modal-content" id="modal-content">
+          <div class="modal-text" id="modal-text">
+
+          </div>
+          <span onclick="onclickBtnSpan()" class="close" id="close">Назад</span>
+        </div>
+      </div>
+    <script type="text/javascript">
+      var app = new Main_Solar(document.getElementById("Solar_System"));
+    </script>
+  </body>
+</html>
